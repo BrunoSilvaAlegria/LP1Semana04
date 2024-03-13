@@ -1,7 +1,10 @@
 ﻿using System;
 
 namespace BetterDecorator
-{
+{   /// <summary>
+    /// Receives 3 arguments that are later processed and transforms them 
+    /// a string surrounded by a character a certain number of times.
+    /// </summary>
     class Program
     {   /// <summary>
         /// Write a string that contain a specific character that appears 
