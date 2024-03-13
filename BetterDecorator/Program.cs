@@ -13,9 +13,17 @@ namespace BetterDecorator
         /// <param name="args"></param>
         static void Main(string[] args)
         {
-            //Prints the string modified by the Decor method
-            Console.WriteLine(Decor(args[0],char.Parse(args[1])
-            ,int.Parse(args[2])));
+            if (args.Length == 0)
+            {
+                //Prints the error string 
+                Console.WriteLine(Decor());
+            }
+            else
+            {
+                //Prints the string modified by the Decor method
+                Console.WriteLine(Decor(args[0],char.Parse(args[1])
+                ,int.Parse(args[2])));
+            }
         }
         /// <summary>
         /// Receive a string, a character and an integrable and make 
@@ -47,5 +55,10 @@ namespace BetterDecorator
             //Prints the final string
             return (str);
         }
-    }
+        private static string Decor()
+        {
+            return Decor("User did not specify args!", '=', 3);
+
+        }
+    }    
 }
