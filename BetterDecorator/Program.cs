@@ -9,6 +9,8 @@ namespace BetterDecorator
     {   /// <summary>
         /// Write a string that contain a specific character that appears 
         /// n times to the left and right of the phrase.
+        /// In addiction, when no arguments are given, then it will print an 
+        /// error string.
         /// </summary>
         /// <param name="args"></param>
         static void Main(string[] args)
@@ -39,6 +41,7 @@ namespace BetterDecorator
             //Creates the final string
             string str = "";
 
+
             for(int i=0; i<n; i++) 
             //Adds character to the beginning of the final string while i < n
             {
@@ -55,6 +58,11 @@ namespace BetterDecorator
             //Prints the final string
             return (str);
         }
+        /// <summary>
+        /// Method used when the user doesn't give any arguments, and it is 
+        /// called in the Decor method above.
+        /// </summary>
+        /// <returns></returns>
         private static string Decor()
         {
             return Decor("User did not specify args!", '=', 3);
