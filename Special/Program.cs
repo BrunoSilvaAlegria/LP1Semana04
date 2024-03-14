@@ -6,20 +6,27 @@ namespace Special
     {
         private static int GetSpecial(int n)
         {
-
-            int i = 0;
-            if (n == 1) //Base case
-                i = 1;
+            int i;
+            if (n == 0)
+            {
+                i = 0; //Base case 1
+            }
+            else if (n == 1)
+            {
+                i = 1; //Base case 2
+            }
             else
-                i = n * GetSpecial(n - 1); //Other possibilities
+            {
+                i = GetSpecial(n - 1) + 2 * GetSpecial(n - 2);                
+            }
             return i;
-        
+      
         }
         static void Main(string[] args)
         {
-            Console.WriteLine("Hello, World!");
-            GetSpecial(0);
-            GetSpecial(2);
+            Console.Write("What is the n-th number you want?\n>");
+            int a = int.Parse(Console.ReadLine());
+            Console.WriteLine(GetSpecial(a));
         }
     }
 }
